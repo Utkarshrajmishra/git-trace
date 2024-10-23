@@ -107,12 +107,15 @@ const NewBookmarkBtn = ({
             </div>
             <div className="flex flex-col gap-2">
               <Label htmlFor="description">Description</Label>
-              <Textarea
-                name="description"
-                id="description"
-                placeholder="Description (optional)"
-                defaultValue={description}
-              />
+              <div>
+                <Textarea
+                  name="description"
+                  id="description"
+                  placeholder="Description (optional)"
+                  defaultValue={description}
+                />
+                <p className="text-sm mt-1 font-semibold cursor-pointer text-right">Generate by AI ✨</p>
+              </div>
             </div>
             <SubmitButton loading={loading} />
           </form>
